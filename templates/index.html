@@ -31,7 +31,7 @@
 
             socket.on('my_pong', function () {
                 var latency = (new Date).getTime() - start_time;
-                $('latency').text(Math.round(10 * sum / ping_pong_times.length) / 10);
+                $('latency').text(latency);
             });
 
         });
