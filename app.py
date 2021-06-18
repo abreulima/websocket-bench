@@ -12,5 +12,9 @@ def index():
 def test_connect():
     emit('after connect',  {'data':'Lets dance'})
 
+@socketio.event
+def my_ping():
+    emit('my_pong')
+
 if __name__ == '__main__':
-    socketio.run(app)
+    socketio.run(app, debug=True)
